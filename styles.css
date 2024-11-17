@@ -1,0 +1,144 @@
+/* styles.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a2d9ff, #6eb9ff); /* Sky Blue Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Main Container */
+.todo-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4a90e2; /* Sky Blue */
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Pacifico', cursive;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#todo-input {
+    width: 75%;
+    padding: 12px 18px;
+    border: 2px solid #4a90e2; /* Matching Blue */
+    border-radius: 15px;
+    outline: none;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+#todo-input:focus {
+    border-color: #0078d4; /* Darker Blue on Focus */
+    box-shadow: 0 0 5px rgba(0, 120, 212, 0.5);
+}
+
+#add-btn {
+    padding: 12px 25px;
+    background-color: #4a90e2; /* Matching Blue */
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#add-btn:hover {
+    background-color: #0078d4; /* Darker Blue on Hover */
+    transform: scale(1.05);
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: #e6f7ff; /* Light Blue Background for Tasks */
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+li button {
+    background-color: #0078d4; /* Darker Blue for Delete Button */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+li button:hover {
+    background-color: #005fa3; /* Darker Blue on Hover */
+}
+
+li span {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+li .task-complete {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
